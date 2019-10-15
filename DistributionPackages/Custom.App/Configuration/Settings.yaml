@@ -1,0 +1,24 @@
+Neos:
+  Flow:
+    mvc:
+      routes:
+        'Custom.App':
+          position: 'start'
+
+t3n:
+  GraphQL:
+    endpoints:
+      'graphql':
+        schemas:
+          cr:
+            typeDefs: 'resource://Neos.CR.GraphQL/Private/GraphQL/schema.core.graphql'
+          root:
+            typeDefs: 'resource://Custom.App/Private/GraphQL/schema.root.graphql'
+            resolvers:
+              Query: 'Custom\App\Resolver\QueryResolver'
+          nodeTypes:
+            typeDefs: 'resource://Custom.App/Private/GraphQL/schema.nodetypes.graphql'
+            resolvers:
+              Node: 'Neos\CR\GraphQL\Resolver\NodeResolver'
+              Context: 'Neos\CR\GraphQL\Resolver\ContextResolver'
+

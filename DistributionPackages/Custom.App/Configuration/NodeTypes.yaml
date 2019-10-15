@@ -1,0 +1,23 @@
+
+'Neos.ContentRepository.Testing:ContentMixin': []
+
+'Neos.ContentRepository.Testing:Content':
+  superTypes:
+    'Neos.ContentRepository.Testing:ContentMixin': true
+  constraints:
+    nodeTypes:
+      '*': false
+
+'Neos.ContentRepository.Testing:Text':
+  properties:
+    text:
+      type: string
+      defaultValue: 'This is a text'
+
+'Neos.ContentRepository.Testing:Html':
+  superTypes:
+    'Neos.ContentRepository.Testing:Content': true
+  properties:
+    source:
+      type: string
+      defaultValue: '<p>Enter HTML here</p>'

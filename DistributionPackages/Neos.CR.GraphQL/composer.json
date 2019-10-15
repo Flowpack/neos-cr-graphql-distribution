@@ -1,0 +1,26 @@
+{
+    "description": "Neos ContentRepository GraphQL Adapter",
+    "type": "neos-package",
+    "name": "neos/cr-graphql",
+    "config": {
+        "bin-dir": "bin"
+    },
+    "require": {
+        "t3n/graphql": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neos\\CR\\GraphQL\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Neos\\CR\\GraphQL\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Neos.CR.GraphQL"
+        }
+    }
+}

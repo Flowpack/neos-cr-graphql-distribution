@@ -1,0 +1,27 @@
+type NeosContentRepositoryTestingTextProperties {
+    text: String
+}
+type NeosContentRepositoryTestingHtmlProperties {
+    source: String
+}
+
+type NeosContentRepositoryTestingText implements Node {
+    identifier: ID!
+    path: String!
+    parentPath: String!
+    name: String!
+    workspace: Workspace!
+    context: Context!
+    properties: NeosContentRepositoryTestingTextProperties!
+}
+
+type NeosContentRepositoryTestingHtml implements Node {
+    identifier: ID!
+    path: String!
+    parentPath: String!
+    name: String!
+    workspace: Workspace!
+    context: Context!
+    properties: NeosContentRepositoryTestingHtmlProperties!
+}
+
