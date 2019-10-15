@@ -1,0 +1,26 @@
+{
+    "description": "Test App",
+    "type": "neos-package",
+    "name": "custom/app",
+    "config": {
+        "bin-dir": "bin"
+    },
+    "require": {
+        "neos/cr-graphql": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Custom\\App\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Custom\\App\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Custom.App"
+        }
+    }
+}

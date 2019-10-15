@@ -1,0 +1,38 @@
+
+
+# Workpspace type
+
+# node type id, path, workspace, nodetype: SDF, context
+# node interface
+
+# context type
+
+type Dimension {
+    name: String!
+    value: String!
+}
+
+type Context {
+    workspaceName: String!
+    dimensions: [Dimension!]
+}
+
+type Workspace {
+    name: ID!
+    title: String!
+    description: String
+    baseWorkspace: Workspace
+}
+
+interface Node {
+    identifier: ID!
+    path: String!
+    name: String!
+    parentPath: String!
+    workspace: Workspace!
+    context: Context!
+}
+
+extend type Query {
+    nodeByPath(path: String!): Node
+}
